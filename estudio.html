@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola al DOM</h1>
+    <h3 class="h3class">Título h3</h3>
+    <h3 class="h3class">Título dos h3</h3>
+    <p id="parrafo">Texto estático</p>
+<script>
+//Seleccion del selector de etiqueta
+/*document.querySelector('h3')
+console.log(document.querySelector('h3'))
+console.log(document.querySelector('.h3class'))
+console.log(document.querySelector('#parrafo')) // Usando querySelector para id o class tengo que poner . o # para la llamada
+console.log(document.getElementById('parrafo')) // Usando query ElementById  NO tengo que poner . o # en la llamada
+console.log(document.querySelectorAll('.h3class')) // Selecciono todas las clases .  poruq tengo dos class con el mismo nombre
+console.log(document.querySelectorAll('.h3'))*/
+
+const parrafo = document.querySelector('#parrafo')
+parrafo.textContent = 'Texto cambiado con JS'
+parrafo.innerHTML = '<b>Texto con innerHTML</b>' // Con innerHTML  podemos poner etiquetas  br
+                                                // innerHTML  modifica el interior de textContent
+parrafo.classList.add('h3class') //Añadir una clase a un parrafo 
+
+
+
+// createElement
+
+</script>
+</body>
+</html>
