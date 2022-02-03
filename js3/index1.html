@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>  
+    
+        <div class="titulo">
+            <h1 id="titulo">Título</h1>
+        </div>
+
+        <div class= "central">
+            <div class="menu">
+                
+                <ul>
+           
+                    <li id="home"></a><button onclick="funcionhome(home)">Home</button><p id="home"></p></li>
+                    </li>
+                    <li id = "news"></a><button onclick="funcionnews(news)">News</button><p id="news"></p></li>
+                    <li id = "contact">Contact</a></li>
+                    <li is ="about">About</a></li>
+                  </ul>
+            </div>
+
+            <div class="texto"> 
+                <p id= "parrafo1">
+                    Para empe#ar, los insectos 
+                    no tienencolumna ertebral. $demás tienen el esqueletopor fuera del cuerpo 
+                    y la carne por dentro. %otienen pulmones, pero respiran por unosagu&eros laterales. 
+                    Pueden saborear con laspatas 
+                    y oler con antenas. $lguno incluso tieneoídos en las rodillas.</p>
+                <br>
+                <p onclick="cambiarParrafo2(this)" class="p2">Para empe#ar, los insectos 
+                    no tienencolumna ertebral. $demás tienen el esqueletopor fuera del cuerpo 
+                    y la carne por dentro. %otienen pulmones, pero respiran por unosagu&eros laterales. 
+                    Pueden saborear con laspatas 
+                    y oler con antenas. $lguno incluso tieneoídos en las rodillas.</p>
+                <br>
+                <p onclick= "cambiarParrafo3(this)" class="p3">Para empe#ar, los insectos 
+                    no tienencolumna ertebral. $demás tienen el esqueletopor fuera del cuerpo 
+                    y la carne por dentro. %otienen pulmones, pero respiran por unosagu&eros laterales. 
+                    Pueden saborear con laspatas 
+                    y oler con antenas. $lguno incluso tieneoídos en las rodillas.</p>
+            </div>
+
+        </div>
+
+        
+        <div class="pie">
+            <img src="orni1.jpg" id="orn1" >
+            <img src="orni2.jpg" id="orn2" >
+            <img src="orni3.png" id="orn3">
+        </div>
+
+        <script>
+
+// funcion del boton Home
+function funcionhome(home) {
+                var variablehome = document.querySelector("#parrafo1")
+                variablehome.innerHTML = "Holaaaaaaaaaaaaaaaaaa"
+                variablehome.style.color = "white";
+                variablehome.style.fontSize = '30px';
+
+            }
+
+// funcion del boton News
+
+    function funcionnews(news) {
+        var image = document.getElementById('orn1');
+        if (image.src.match("orni1.jpg")) {
+            image.src = "https://cdn.pixabay.com/photo/2018/10/01/09/21/pets-3715733__480.jpg";
+        } else {
+            image.src = "orni1.jpg";
+        }
+    }
+
+//  Cambiar Titulo
+
+
+
+            function cambiarParrafo2(elPropioElemento) {
+                var parrafo2 = elPropioElemento
+                parrafo2.innerHTML = "Holaaaaaaaaa"
+                parrafo2.style.color = "green";
+
+            }
+            function cambiarParrafo() {
+                var parrafo3 = document.querySelector(".p3")
+                parrafo3.innerHTML = "Holaaaaaaaaaaaaaaaaaa"
+                parrafo3.style.color = "red";
+
+            }
+
+
+
+
+        </script>
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <!-- imagen que cambia al tocarla -->
+    <img src="foto1.png" onclick="cambiarImagen()">
+
+    <script>
+
+        var contador = 0
+        function cambiarImagen(){
+            var etiquetaImagen = document.querySelector("img")
+
+           
+           if (contador%2 == 1){
+                etiquetaImagen.src = "foto2.jpg"
+           }else{
+                etiquetaImagen.src = "foto1.png"
+           }
+
+           contador ++
+           
+        }
+
+
+
+    </script>
+
+
+    <!-- resolucion ejercicio2 -->
+
+    <h1>H1 DEL EJERCICIO 2</h1>
+    <p class="parrafo1"> Para empe#ar, los insectos 
+        no tienencolumna ertebral. $demás tienen el esqueletopor fuera del cuerpo 
+        y la carne por dentro. %otienen pulmones, pero respiran por unosagu&eros laterales. 
+        Pueden saborear con laspatas 
+        y oler con antenas. $lguno incluso tieneoídos en las rodillas.</p>
+    <p class="parrafo2">Para empe#ar, los insectos 
+        no tienencolumna ertebral. $demás tienen el esqueletopor fuera del cuerpo 
+        y la carne por dentro. %otienen pulmones, pero respiran por unosagu&eros laterales. 
+        Pueden saborear con laspatas 
+        y oler con antenas. $lguno incluso tieneoídos en las rodillas.</p>
+    <p class="parrafo3"> Para empe#ar, los insectos 
+        no tienencolumna ertebral. $demás tienen el esqueletopor fuera del cuerpo 
+        y la carne por dentro. %otienen pulmones, pero respiran por unosagu&eros laterales. 
+        Pueden saborear con laspatas 
+        y oler con antenas. $lguno incluso tieneoídos en las rodillas.</p>
+    <img src="niños.jpeg" id="imagen1">
+    <img src="perro.jpeg" id="imagen2" >
+
+    <script>
+
+        var elementoTitulo = document.querySelector("h1")
+        elementoTitulo.innerHTML = "Resolucion 2 modificada"
+
+        var elementoParrafo1 = document.querySelector(".parrafo1")
+        elementoParrafo1.innerHTML = "123123123wfasdgfagfq23 123123 aqweqwe asd asd "
+
+        var elementoParrafo2 = document.querySelector(".parrafo2")
+        elementoParrafo2.align = "left"
+
+        var elementoParrafo3 = document.querySelector(".parrafo3")
+        elementoParrafo3.style.color = "blue"
+
+        var elementoTitulo = document.querySelector("#imagen1")
+        elementoTitulo.src = "foto1.png"
+
+        var elementoTitulo = document.querySelector("#imagen2")
+        elementoTitulo.style.width = "400px"
+
+
+    </script>
+</body>
+</html>
