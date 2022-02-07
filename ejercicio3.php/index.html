@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>  
+ 
+
+
+
+<!--4. Debereis añadir el evento onclick al Titulo, para que cuando lo pulses c
+ambie su contenido y cambie su color de fondo.-->
+<div class="titulo">
+    <h1 id="titulo"><button onclick="funciontitulo(titulo)">Título</button></h1>
+</div>
+<script>
+
+    function funciontitulo(titulo) {
+
+        document.querySelector(".titulo").innerHTML = "Titulo Nuevo"
+        document.querySelector(".titulo").style["background-color"] ="blue"
+        document.querySelector(".titulo").style.fontSize = '80px';
+
+        }
+
+</script> 
+        <div class= "central">
+            <div class="menu">
+                
+                <ul><li id="home"></a><button onclick="funcionhome(home)">
+                    Home
+                </button></li>
+                </li>
+                   <!-- <li id="home"></a><button onclick="myFunction(home)">Home
+                    </button> <p id="home"></p></li> --> 
+                    <!--Boton para enlazarlo con el parrafo abajo al poner funcion home-->
+  
+                    
+                    <li id = "news"></a><button onclick="funcionnews(news)">
+                        News
+                    </button></li>
+                   
+                    <!--  <li id="contact" onclick="contacto(this)">Contact</li>  -->
+                    <li id = "contact"></a><button onclick="funcioncontact(contact)">
+                        News
+                    </button></li>
+                    <li id = "about"></a><button onclick="funcionabout(about)">
+                      About
+                    </button></li>
+                  </ul>
+            </div>
+
+            <div class="texto"> 
+                <p id="texto1">Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                <br>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                <br>
+                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+            </div>
+
+        </div>
+         <!--1. Cambiar el color de fondo de los párrafos-->  
+        <script>
+            var elementoTexto = document.querySelector(".texto")
+
+            elementoTexto.style["background-color"] ="blue"
+        </script>
+
+        
+        <div class="pie">
+            <img src="orni1.jpg" id="orn1" > <!--Para emplear este id con  document.getElementById-->
+            <img src="orni2.jpg" id="orn2" >
+            <img src="orni3.png" id="orn3">
+        </div>
+    <script>
+/*2. Debereis añadir el evento onclick al boton "home", para que cambie el contenido del 
+primer parrafo y su tamaño cuando lo pulses.*/
+/*function myFunction(home) {
+
+document.querySelector("#texto1").innerHTML = "Texto cambiado correctamente."
+document.querySelector("#texto1").style.fontSize = '30px'; // Cambia el tamaño
+document.querySelector("#texto1").style.color = 'white';
+}*/
+function funcionhome(home) {
+                var variablehome = document.querySelector("#texto1")
+                variablehome.innerHTML = "Texto cambiado correctamente." // Cambio de texto
+                variablehome.style.color = "white"; // Cambio de color texto
+                variablehome.style.fontSize = '30px'; // Cambio de tamaño
+
+            }
+/*3. Debereis añadir el evento onclick al boton "news", para que cada vez que 
+lo apretes cambie la imagen de más a la izquierda por otra cualquiera.
+La de la izd es orni1   En pixabay copia la ruta de una imagen ya la pego*/
+
+
+function funcionnews(news) {
+        var image = document.getElementById('orn1');
+        if (image.src.match("orni1.jpg")) {
+            image.src = "https://tse3.mm.bing.net/th?id=OIP.qHB0-vi8D2gRrFe-MOfMXwHaE8&pid=Api&P=0&w=242&h=161";
+        } else {
+            image.src = "orni1.jpg";
+        }
+    }
+
+/*
+    5. Debereis añadir el evento onclick al boton "contact" para que cuando lo 
+pulses cambie el tamaño de la imagen del medio y le añada un borde.*/
+    function funcioncontact(contact){
+
+        var imagen = document.getElementById("orn2")
+
+            if ("orni2.jpg"){
+
+                imagen.style.height = "500px";
+                imagen.style.width = "500px";   
+                imagen.style.border="10px solid black";
+
+            } else {
+
+                  imagen.src = "./orni2.jpg"
+}
+            }
+/*
+6. Debereis añadir el evento onclick al boton "about" para cue cuando lo 
+pulses vuelva la imagen a su tamaño y le quite el borde si lo tiene.*/
+/*function funcionabout(about){
+
+var imagen = document.getElementById("orn2")
+
+    if ("orni2.jpg"){
+        
+       
+               
+    } else {
+        imagen.src = "./orni2.jpg"
+          
+}
+    }*/
+    </script>
+</body>
+</html>
