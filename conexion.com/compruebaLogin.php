@@ -7,8 +7,22 @@
     <title>Document</title>
 </head>
 <body>
- 
+    <?php
 
+require("datosConexion.php"); 
+
+
+session_start();
+
+  //usuario y contraseña 
+
+  $usuario    = $_POST["usuario"];
+  $contrasena = $_POST["contrasena"];
+
+  //Loguearnos
+ 
+  
+?>
 
 </body>
 </html>

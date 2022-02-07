@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>  
-    
+      <!--
+1. Cambiar el color de fondo de los párrafos
+
+
+5. Debereis añadir el evento onclick al boton "contact" para que cuando lo 
+pulses cambie el tamaño de la imagen del medio y le añada un borde.
+6. Debereis añadir el evento onclick al boton "about" para cue cuando lo 
+pulses vuelva la imagen a su tamaño y le quite el borde si lo tiene.-->  
+
         <div class="titulo">
             <h1 id="titulo">Título</h1>
         </div>
@@ -59,6 +67,9 @@
         <script>
 
 // funcion del boton Home
+
+/* 2. Debereis añadir el evento onclick al boton "home", para que cambie el contenido del 
+primer parrafo y su tamaño cuando lo pulses.*/
 function funcionhome(home) {
                 var variablehome = document.querySelector("#parrafo1")
                 variablehome.innerHTML = "Holaaaaaaaaaaaaaaaaaa"
@@ -68,6 +79,8 @@ function funcionhome(home) {
             }
 
 // funcion del boton News
+/*3. Debereis añadir el evento onclick al boton "news", para que cada vez que 
+lo apretes cambie la imagen de más a la izquierda por otra cualquiera.-*/
 
     function funcionnews(news) {
         var image = document.getElementById('orn1');
@@ -79,7 +92,9 @@ function funcionhome(home) {
     }
 
 //  Cambiar Titulo
-
+/*
+4. Debereis añadir el evento onclick al Titulo, para que cuando lo pulses c
+ambie su contenido y cambie su color de fondo.*/
 
 
             function cambiarParrafo2(elPropioElemento) {

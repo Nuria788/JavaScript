@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>  
-     <!--1. Cambiar el color de fondo de los párrafos
+    <!--
+1. Cambiar el color de fondo de los párrafos
 2. Debereis añadir el evento onclick al boton "home", para que cambie el contenido del 
 primer parrafo y su tamaño cuando lo pulses.
 3. Debereis añadir el evento onclick al boton "news", para que cada vez que 
@@ -18,8 +19,7 @@ ambie su contenido y cambie su color de fondo.
 5. Debereis añadir el evento onclick al boton "contact" para que cuando lo 
 pulses cambie el tamaño de la imagen del medio y le añada un borde.
 6. Debereis añadir el evento onclick al boton "about" para cue cuando lo 
-pulses vuelva la imagen a su tamaño y le quite el borde si lo tiene.-->  
-
+pulses vuelva la imagen a su tamaño y le quite el borde si lo tiene.-->    
         <div class="titulo">
             <h1>Título</h1>
         </div>
@@ -36,17 +36,19 @@ pulses vuelva la imagen a su tamaño y le quite el borde si lo tiene.-->
             </div>
 
             <div class="texto"> 
-                <p>Nam libero tempore, cum soluta nobis est eligendi optio c
-                    umque nihil impedit quo minus id quod maxime placeat facere possimus, 
-                    omnis voluptas assumenda est, omnis dolor repellendus.</p>
+                <p>Nam libero tempore, cum soluta nobis est eligendi 
+                    optio cumque nihil impedit quo minus id quod maxime 
+                    placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
                 <br>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus 
-                    qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores 
-                    et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                <p>At vero eos et accusamus et iusto odio dignissimos 
+                    ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
                 <br>
-                <p>Temporibus autem quibusdam et aut officiis debitis aut rerum 
-                    necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae n
-                    on recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat</p>
+                <p onclick= "cambiarParrafo2(this)" class="p3">Temporibus 
+                    autem quibusdam et aut officiis debitis aut rerum necessitatibus 
+                    saepe eveniet ut et voluptates repudiandae sint et molestiae non r
+                    ecusandae. Itaque earum rerum hic tenetur a sapiente delectus, 
+                    ut aut reiciendis voluptatibus maiores alias consequatur aut 
+                    perferendis doloribus asperiores repellat</p>
             </div>
 
         </div>
@@ -57,6 +59,25 @@ pulses vuelva la imagen a su tamaño y le quite el borde si lo tiene.-->
             <img src="orni2.jpg" id="orn2" >
             <img src="orni3.png" id="orn3">
         </div>
+
+        <script>
+            /*function cambiarParrafo() {
+                var parrafo3 = document.querySelector(".p3")
+                parrafo3.innerHTML = "Hola pepito"
+                parrafo3.style.color = "yellow";
+
+            }*/
+
+            function cambiarParrafo2(elPropioElemento) {
+                var parrafo3 = elPropioElemento
+                parrafo3.innerHTML = "Hola pepito"
+                parrafo3.style.color = "yellow";
+
+            }
+
+
+
+        </script>
     
 </body>
 </html>
