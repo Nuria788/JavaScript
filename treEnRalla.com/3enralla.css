@@ -1,0 +1,65 @@
+div{
+    border:3px solid black;
+    width:150px;
+    height:150px;
+
+    position: absolute;
+
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+    background-image: url("petirojo.jpg");
+    background-size: 150px 150px;
+}
+
+.x1y1{
+    top:0;
+    left:0;
+}
+
+.x2y1{
+    top:0;
+    left:150px;
+}
+
+.x3y1{
+    top:0;
+    left:300px;
+}
+
+.x1y2{
+    top:150px;
+    left:0;
+}
+
+.x2y2{
+    top:150px;
+    left:150px;
+}
+
+.x3y2{
+    top:150px;
+    left:300px;
+}
+
+.x1y3{
+    top:300px;
+    left:0;
+}
+
+.x2y3{
+    top:300px;
+    left:150px;
+}
+
+.x3y3{
+    top:300px;
+    left:300px;
+}
+
+.cartelWin{
+    position: absolute;
+    top:450px;
+    
+}
