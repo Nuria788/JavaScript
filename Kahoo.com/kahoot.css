@@ -1,0 +1,65 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+    font-size: larger;
+    font-weight: bold;
+}
+
+
+.pregunta {
+
+    background-color: rgb(0, 234, 255);
+    border: 1px solid black;
+    height: 50vh;
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.respuesta{
+    background-color:darkslateblue;
+    border: 1px solid black;
+    height: 50vh;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.respuesta div{
+    width:50%;
+    height: 50%;
+    line-height:30px ;
+    border: 4px solid black;
+    text-align: center;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.res1{
+    background-color: rgb(170, 84, 84);
+}
+.res2{
+    background-color: darkslateblue;
+}
+.res3{
+    background-color: rgb(221, 190, 12);
+}
+.res4{
+    background-color: rgb(139, 212, 29);
+}
+
+
+.puntuacion{
+    position: absolute;
+    bottom: 0;
+}
+

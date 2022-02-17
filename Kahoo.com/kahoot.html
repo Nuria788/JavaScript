@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kahoot IAW</title>
+    <link rel="stylesheet" href="kahoot.css">
+</head>
+<body>
+
+
+    <!-- div superior donde se muestra el texto de la prengunta y la puntuacion adquirida por el jugador -->
+    <div class="pregunta">
+            <div class="texto">
+                   ¿ Pregunta  ?          
+                
+            </div>
+
+            <div class= "puntuacion">
+                Aciertos: <span class="acierto">0</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                Fallos: <span class="fallo">0</span>
+            </div>
+    </div>
+
+    <!-- div inferior donde aparecen las posibles respuestas a la prengunta -->
+    <div class="respuesta">
+
+        <div class="res1" onclick="clickRespuesta(this)">     res1     </div>
+        <div class="res2" onclick="clickRespuesta(this)">     res2     </div>
+        <div class="res3" onclick="clickRespuesta(this)">     res3     </div>
+        <div class="res4" onclick="clickRespuesta(this)">     res4     </div>
+
+    </div>
+
+
+    
+    <!-- cargo el programa de javascript -->
+    <script src="kahoot.js"></script>
+    
+</body>
+</html>
