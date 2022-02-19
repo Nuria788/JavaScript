@@ -99,7 +99,7 @@
                 echo "Error: " . $sqlQuery . "<br>" . mysqli_error($conexion);
                       }
 
-/*
+
 
  //query para comprobar si existe un usuario y contraseña
 //contraseña o usuario correctos o incorrectos
@@ -116,7 +116,7 @@ if ($usuarioExiste){
 echo "login correcto";
 }else{
 echo "usuario o contraseña incorrectos"; }
-*/
+
         ?>
     
 </body>
