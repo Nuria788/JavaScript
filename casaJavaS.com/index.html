@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="encabezado"> Este es un Encabezado </h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus 
+    dolore quisquam cupiditate eveniet a ullam facere architecto unde provident laboriosam
+     </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus 
+    dolore quisquam cupiditate eveniet a ullam facere architecto unde provident laboriosam
+    </p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam ducimus 
+    dolore quisquam cupiditate eveniet a ullam facere architecto unde provident laboriosam
+    </p>
+    <p>Año:  <input type="text" id="ano"> </p> <!--Fecha. Abajo la function-->
+    
+    
+    <script>
+
+        function inicio() {
+             document.getElementById('encabezado').style.color ='red'; // Constantemente
+    }
+             window.addEventListener('load', inicio);
+
+        function cambiaEstilo() {
+            document.getElementById('ano').style.color ='blue'; // Cambia el color del numero
+            document.getElementById('ano').style.fontSize ='2em'; // Cambia el tamaño al clicar
+        }
+
+        function inicioAno() { //Funcion para tener la fecha actual
+          var anyo = new Date().getFullYear();
+        document.getElementById('ano'). value = anyo;
+        document.getElementById('ano'). addEventListener('click', cambiaEstilo);
+    
+    }   
+        document.addEventListener('DOMContentLoaded', inicioAno)
+
+    //-----------
+var i;
+var nombres = ['Laura', 'Nuria', 'Ruth', 'Alberto'];
+    for(i = 0; i < nombres.length; i ++){
+        alert ('Hola ' + nombres [i]);
+    } 
+
+        </script>
+</body>
+</html>
