@@ -16,11 +16,11 @@
 $conexion = mysqli_connect($direccionBD, $usuarioBD, $contrasenaBD, $nombreBD);
 echo "KK";
 
-$queryNombres = "select nombre from juegos";
+$queryNombres = "select nombre from juego";
 $datos = mysqli_query ($conexion, $queryNombres);
 
 for ($i = 0; $i < 20;  $i++ ){
-    $fila = mysqli_fetc_assoc($datos);
+    $fila = mysqli_fetch_assoc($datos);
     echo  $fila ["nombre"] . "<br>";  
 
 }
