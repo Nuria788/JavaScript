@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .btnImg{
+            width:200px;
+            line-height:100px;
+
+            background-color: aquamarine;
+            border: 2px solid black;
+
+        }
+
+        .btnText{
+            width:200px;
+            line-height:100px;
+
+            background-color: rgb(255, 242, 127);
+            border: 2px solid black;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="btnImg" onclick="crearImagen()">Boton Imagen</div>
+
+    <div class="btnText" onclick= "crearTexto()">Boton Texto</div>
+
+    <div class="contenedor"></div>
+
+
+    <script>
+        var elCon = document.querySelector(".contenedor")
+
+        function crearImagen(){
+            elCon.innerHTML = elCon.innerHTML + "<img src='gato2.jfif'>"
+        }
+
+        function crearTexto(){
+            elCon.innerHTML = elCon.innerHTML + " hola "
+        }
+
+
+    </script>
+
+</body>
+</html>
