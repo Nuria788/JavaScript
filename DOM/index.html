@@ -48,7 +48,12 @@
 <button id = "boton"> Botón </button>
 <input type="text" id="input">
 
-
+<h2>------Ejercicio -------------------</h2>
+<a href="www.google.com">google.com</a> <br/>
+<a href="www.codigomentor" class = "milink">codigomentor.com</a> <br/>
+<a href="wwwyoutube.com" class = "milink">youtube.com</a><br/>
+<a href="yahoo.com" class = "milink">yahoo.com</a><br/>
+<button onclick="miFuncion()">Hazme click</button>
 
 
     <script>
@@ -121,7 +126,9 @@ var segundoElemento = document.getElementById("segundo");
       // CAMBIAR ESTILOS
 
       var encabezado = document.getElementById("encabezado");
+      encabezado.innerHTML= "Youtube";
       encabezado.style.color = "navy";
+      encabezado.style.fontSize = "80px";
       encabezado.style.background = "red";
       encabezado.style.paddingTop  ="20px";
       encabezado.style.fontFamily = "60px";
@@ -137,7 +144,6 @@ var zoom = function(){
     }else{
         thumb.className ="thumb";
     }
-    
 }
 
  //  Ejercicio Boton 
@@ -145,11 +151,33 @@ var zoom = function(){
 
 Function ()
     var saludo = function () {
-        alert('SALUDO');
-    
+        alert('SALUDO');    
 };
-var input = document.getElementById('boton');
-boton.addEventListener("click", saludo);
+
+var boton = document.getElementById('boton');
+boton.addEventListener("click", saludo);  
+// click es el evento y se pued cambiar por 'focus', change (cambio)
+
+Function ()
+    var hola = function () {
+        console.log('focus');    
+};
+var input = document.getElementById('input');
+input.addEventListener("focus", hola);  
+// focus cada vez que entro en un formulario  lo contrario es blur (cuando salimos de un formulario)
+// change  ejecuta el evento cuando el input ha tenido un cambio
+// input.removeEventListener("focus", hola);  eliminar un evento 
+
+/*EJERCIIO QuerySelector*/
+function miFuncion() {
+    //document.querySelector(".milink").style.background = "yellow"; //. porque es una class   # id
+ //   document.querySelector("a[class = 'milink']").style.background = "yellow"; // Es lo mismo
+ //   document.querySelector("a[class = 'milink']").style.border = "4px solid red";
+
+    var cambio = document.querySelector (".milink");
+    cambio.style.background = "yellow";
+    cambio.style.border = "4px solid green";
+}
 
     </script>
 
