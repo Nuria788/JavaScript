@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>DOM</title>
+</head>
+<body>
+<h1 id = "titulo">Titulo de nuestro sitio</h1>
+
+<div id ="subtitulo"> </div>
+
+<p id = "segundo">1.- Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, pariatur. 
+  consectetur nulla voluptate similique doloribus cumque?</p>
+<p id = "tercero">2.- Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, pariatur. 
+   nulla voluptate similique doloribus cumque?</p>
+<p> 3.-Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, pariatur. 
+    nulla voluptate similique doloribus cumque?</p>
+
+
+<!-- EJERCICIO 2-->
+<h2> Ejercicio2  Crear un nuevo li y donde</h2>
+<ol id = "lista">
+    <li>Donde posicionar un elemento</li>
+    <li id ="segundo" >Lorem ipsum dolor sit ametficia quas, adipiss.</li>
+    <li id ="tercero" >Lorem ipsum dolor sit .</li>
+</ol>
+ 
+
+<!--    Estilos DOM-->
+<h2> Ejercicio de Modificar Estilos</h2>
+
+<h1 id ="encabezado" class ="">Soy el Encabezado Estilos DOM\^.^/</h1>
+
+<!-- ONCLICK IMAGENES grande pequeño-->
+<H2>ONCLICK IMAGENES   grande-pequeño</H2>
+<form action="">
+    <input type="button" value ="Cambio de Tamaño" onclick="zoom()";>
+</form>
+<img id = "thumb" class = "thumb" src="foto.jpg" width="500" alt="">
+    
+   <!-- Pretar n boton y que haga cosas-->
+   <H2>---------------------------</H2>
+<H2>BOTONES</H2> 
+
+<button id = "boton"> Botón </button>
+<input type="text" id="input">
+
+
+
+
+    <script>
+
+      //  var elementosP = document.getElementsByTagName("p");
+      //  var segundoP = document.getElementById("segundo");
+
+        //1.- CREAR UN ELEMENTO
+        var crear = document.createElement("h2");
+        // 2.- Crear un nodo de texto.
+        var contenido = document.createTextNode("Este es nuestro titular");
+        // 3.- Añadir el nodo 
+        crear.appendChild(contenido);
+        //4.- Agregar atributos al elemento
+        crear.setAttribute("align", "center");
+        //5.- Agregar el elemento al documento MUY IMPORTANTE.
+        // Seleccionamos el div de arriba  y con appelCh seleccionamos 
+        //el nuevo elemento que es un h2
+        document.getElementById("subtitulo").appendChild(crear);
+        //Para agrgarlo al final, pero no funcionará el punto 5.
+       // document.body.appendChild(crear);
+
+
+    //  EJERCICIO 2  Crar un nuevo li.
+
+    var nuevoLi = document.createElement("li");
+        contenido = document.createTextNode("NUEVO TExTO AÑADIDO POR JS ejercicio 2");
+    nuevoLi.appendChild(contenido);
+
+  /*
+         // Añadido al final de la lista
+    var padre = document.getElementById("lista");
+    padre.appendChild(elemento);  //AGREGADO AL FINAL DE LA LISTA
+  */
+
+       // ELIGIENDO DÓNDE COLOCARLO  CON EL INDICE []
+    var padre = document.getElementsByTagName("li")[0].parentNode; //Primer LI con [0]
+        primerElemento = document.getElementsByTagName("li")[0]; 
+        padre.insertBefore(nuevoLi, primerElemento );// inserta  el nuevo li delente del primerElemento
+
+// EJERCICIO 3 Cambiar el texto
+               
+var segundoElemento = document.getElementById("segundo");
+        segundoElemento = document.getElementsByTagName("li")[1];
+        segundoElemento.innerHTML = "Cambiar el texto:  creado en el ejercicio 3"; // TEXTO NUEVO QUE QUIERO QUE TENGA
+     
+        // EJERCICIO 4 Crear un li para reemplazar otro         
+ 
+    var tercerElemento = document.createElement("li");
+        contenido2 = document.createTextNode("Nuevo Texto creado Ejercicio 4");
+
+       tercerElemento.appendChild(contenido2);
+
+       var padre =document.getElementsByTagName("li")[0].parentNode;
+       referencia =document.getElementsByTagName("li")[0];
+      padre.replaceChild(tercerElemento, referencia);
+    
+      // EJERCICIO 5 ELIMAR NODOS DEL DOM
+      
+
+      var cuartoElemento = document.createElement("li");
+        contenido2 = document.createTextNode("Nuevo Texto creado Ejercicio 4");
+
+       cuartoElemento.appendChild(contenido2);
+
+       var padre =document.getElementsByTagName("li")[0].parentNode;
+       referencia1 =document.getElementsByTagName("li")[3];
+      padre.removeChild(referencia1);
+
+      // CAMBIAR ESTILOS
+
+      var encabezado = document.getElementById("encabezado");
+      encabezado.style.color = "navy";
+      encabezado.style.background = "red";
+      encabezado.style.paddingTop  ="20px";
+      encabezado.style.fontFamily = "60px";
+      encabezado.className = encabezado.className.replace("tituloGrande", "");
+
+     //  Ejercicio Boton 
+     // Efecto zoom con imagenes.
+var zoom = function(){
+    var thumb = document.getElementById("thumb");
+    
+    if(thumb.className =="thumb"){
+        thumb.className = "thumb grande";
+    }else{
+        thumb.className ="thumb";
+    }
+    
+}
+
+ //  Ejercicio Boton 
+     // Efecto BOTONES.
+
+Function ()
+    var saludo = function () {
+        alert('SALUDO');
+    
+};
+var input = document.getElementById('boton');
+boton.addEventListener("click", saludo);
+
+    </script>
+
+
+
+</body>
+</html>
