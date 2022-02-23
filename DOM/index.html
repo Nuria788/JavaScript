@@ -8,7 +8,7 @@
     <title>DOM</title>
 </head>
 <body>
-<h1 id = "titulo">Titulo de nuestro sitio</h1>
+<h1 id = "titulo">Titulo de nuestro sitio EJERCICIO 1</h1>
 
 <div id ="subtitulo"> </div>
 
@@ -29,26 +29,26 @@
 </ol>
  
 
-<!--    Estilos DOM-->
-<h2> Ejercicio de Modificar Estilos</h2>
+<!--  3  Estilos DOM  -->
+<h2> Ejercicio 3 de Modificar Estilos</h2>
 
 <h1 id ="encabezado" class ="">Soy el Encabezado Estilos DOM\^.^/</h1>
-
+<!---->
 <!-- ONCLICK IMAGENES grande pequeño-->
-<H2>ONCLICK IMAGENES   grande-pequeño</H2>
+<H2>   EJERCICIO 4  ONCLICK IMAGENES   grande-pequeño</H2>
 <form action="">
     <input type="button" value ="Cambio de Tamaño" onclick="zoom()";>
 </form>
 <img id = "thumb" class = "thumb" src="foto.jpg" width="500" alt="">
     
    <!-- Pretar n boton y que haga cosas-->
-   <H2>---------------------------</H2>
+   <H2>-------- EJERCICIO 5 -------------------</H2>
 <H2>BOTONES</H2> 
 
 <button id = "boton"> Botón </button>
 <input type="text" id="input">
 
-<h2>------Ejercicio -------------------</h2>
+<h2>---EJERCICIO 6---Ejercicio  Click Boton------------------</h2>
 <a href="www.google.com">google.com</a> <br/>
 <a href="www.codigomentor" class = "milink">codigomentor.com</a> <br/>
 <a href="wwwyoutube.com" class = "milink">youtube.com</a><br/>
@@ -61,7 +61,7 @@
       //  var elementosP = document.getElementsByTagName("p");
       //  var segundoP = document.getElementById("segundo");
 
-        //1.- CREAR UN ELEMENTO
+        //1.- CREAR UN ELEMENTO y centrarlo  EJERCICIO 1
         var crear = document.createElement("h2");
         // 2.- Crear un nodo de texto.
         var contenido = document.createTextNode("Este es nuestro titular");
@@ -94,13 +94,13 @@
         primerElemento = document.getElementsByTagName("li")[0]; 
         padre.insertBefore(nuevoLi, primerElemento );// inserta  el nuevo li delente del primerElemento
 
-// EJERCICIO 3 Cambiar el texto
+// EJERCICIO 2.1 Cambiar el texto
                
 var segundoElemento = document.getElementById("segundo");
         segundoElemento = document.getElementsByTagName("li")[1];
         segundoElemento.innerHTML = "Cambiar el texto:  creado en el ejercicio 3"; // TEXTO NUEVO QUE QUIERO QUE TENGA
      
-        // EJERCICIO 4 Crear un li para reemplazar otro         
+        // EJERCICIO 2.2 Crear un li para reemplazar otro         
  
     var tercerElemento = document.createElement("li");
         contenido2 = document.createTextNode("Nuevo Texto creado Ejercicio 4");
@@ -111,7 +111,7 @@ var segundoElemento = document.getElementById("segundo");
        referencia =document.getElementsByTagName("li")[0];
       padre.replaceChild(tercerElemento, referencia);
     
-      // EJERCICIO 5 ELIMAR NODOS DEL DOM
+      // EJERCICIO 2.3 ELIMAR NODOS DEL DOM
       
 
       var cuartoElemento = document.createElement("li");
@@ -123,7 +123,7 @@ var segundoElemento = document.getElementById("segundo");
        referencia1 =document.getElementsByTagName("li")[3];
       padre.removeChild(referencia1);
 
-      // CAMBIAR ESTILOS
+      // CAMBIAR ESTILOS EJERCICIO 3
 
       var encabezado = document.getElementById("encabezado");
       encabezado.innerHTML= "Youtube";
@@ -134,7 +134,7 @@ var segundoElemento = document.getElementById("segundo");
       encabezado.style.fontFamily = "60px";
       encabezado.className = encabezado.className.replace("tituloGrande", "");
 
-     //  Ejercicio Boton 
+     //  Ejercicio Boton EJERCICIO 4
      // Efecto zoom con imagenes.
 var zoom = function(){
     var thumb = document.getElementById("thumb");
@@ -146,7 +146,7 @@ var zoom = function(){
     }
 }
 
- //  Ejercicio Boton 
+ //  Ejercicio Boton EJERCICIO 5
      // Efecto BOTONES.
 
 Function ()
@@ -168,7 +168,7 @@ input.addEventListener("focus", hola);
 // change  ejecuta el evento cuando el input ha tenido un cambio
 // input.removeEventListener("focus", hola);  eliminar un evento 
 
-/*EJERCIIO QuerySelector*/
+/*EJERCIIO QuerySelector  EJERCICIO 6                                         */
 function miFuncion() {
     //document.querySelector(".milink").style.background = "yellow"; //. porque es una class   # id
  //   document.querySelector("a[class = 'milink']").style.background = "yellow"; // Es lo mismo

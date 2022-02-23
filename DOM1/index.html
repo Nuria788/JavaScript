@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio 1 </h1>
+
+    <input type="texto" id ="caja"/>
+    <p><button onclick="miFuncion()">Enviar</button></p>
+    <div id = "info"></div>
+
+
+
+<h1>EJERCICIO 2</h1>
+
+    <div id = "info1"></div>
+
+
+<form name="miForm" action="validar.php" onsubmit="return validarFormulario()" method="POST">
+<p>Usuario:  <input type="text" name ="nombre"/> </p>
+<p>Password:  <input type="password" name ="password"/> </p>
+<input type="submit" value = "ENVIAR"/>
+</form>
+
+<h1>EJERCICIO 3 checkbox</h1>
+
+<form name="miForm1" onsubmit="return validarFormulario1()">
+<p> <input type="checkbox" name ="micheckbox"/> </p>
+<p> <input type="password" name ="password"/> </p>
+<input type="submit" value = "ENVIAR"/>
+</form>
+<br/>
+<div id = "info2"></div>
+
+
+<h1>Ejercicio 4</h1>
+<div id = "bool"></div>
+
+<H1>Ejercico 5</H1>
+<h1>CAMBIAR IMAGEN AL APRETAR UN BOTON</h1>
+<img src="foto.jpg"  id = "foto" alt="">
+<button onclick="MiFuncion()">Hazme click</button>
+
+<H1>Ejercico 6</H1>
+<h1>CAMBIAR IMAGEN AL APRETAR UN BOTON y  volver a apretar y salga otra imagen</h1>
+<img src="foto.jpg"  id = "foto1" alt="">
+<button onclick="MiFuncion1()">Hazme click</button>
+
+<br></br>
+<H1>Ejercico 7</H1>
+<h1>CAMBIAR  en 3 imagenes IMAGEN AL APRETAR UN BOTON</h1>
+
+<img src="foto.jpg" id ="galeriafotos" alt="">
+<button onclick="lafuncion('foto')">foto</button>
+<button onclick="lafuncion('foto1')">foto1</button>
+<button onclick="lafuncion('foto2')">foto2</button>
+
+<!--Ejercicio 1-->
+<script type="text/javascript">
+    function miFuncion() {
+        var texto;
+        var numero = document.getElementById("caja").value;
+        if ( isNaN(numero) || numero < 1 || numero > 8) { 
+            // isNaN obliga que lo que pongamos sea un numero54fv 
+            texto = " <span style = 'color:red'>  Input inválido";
+                document.getElementById("info"). innerHTML = texto;
+                 // Obligar que tenga al menos 5 caracteres la contraseña
+                
+        }else{
+            texto = "<span style = 'color:green'>Input válido"; // 1..8
+                document.getElementById("info"). innerHTML = texto;
+                // Obligar que tenga al menos 5 caracteres la contraseña
+               
+        }
+        document.getElementById("info").innerHTML = texto;
+    }
+
+    // EJERCICIO 2
+    function validarFormulario() {
+        var texto1;
+        var usuario = document.forms["miForm"] ["nombre"].value;  
+        //nombre es el del usuario  en el name del formulario arriba
+
+        if(usuario == null || usuario == ""){ // E caso de la caja este vacía
+            texto1 = "  <span style ='color :red'> Por favor ingrese su nombre de usuario</span>";
+            document.getElementById("info1").innerHTML = texto1;
+            return false;
+        }else if(usuario.length < 5){ // Es menor a 5 caracteres
+            texto1 =  "<span style ='color :blue'> Usuario debe tener al menos 5 caracteres </span>";
+            document.getElementById("info1").innerHTML = texto1;
+            return false;
+            
+
+        }
+        
+    }
+// EJERCICIO 3
+function validarFormulario1() {
+        var texto2;
+        var elemento = document.forms["miForm1"] ["micheckbox"].checked;  
+        //nombre es el del usuario  en el name del formulario arriba
+
+        if(elemento == true){ // En caso de la caja este vacía
+            document.getElementById("info2").innerHTML = "El elemento ha sido seleccionado";
+            return false;
+
+        }else { 
+            document.getElementById("info2").innerHTML = "El elemento NO ha sido seleccionado";
+            return false;
+        }      
+    }
+
+// EJERCICIO 4
+/*var cliente ="Nuria";
+var finalizar = true;
+while(finalizar){
+    var nombre = prompt("Ingrese el nombre del cliente");
+    if(nombre === cliente){
+        document.getElementById("bool").innerHTML ="Cliente " + nombre + "fue encontrado";
+        finalizar = false;
+    }
+}
+*/
+
+//EJERCICIO 5
+function MiFuncion() {
+    var imagen =document.getElementById("foto");
+    imagen.src = "foto2.jpg"
+}
+
+//EJERCICIO 6
+var fotoMostrada ="mujer";
+function MiFuncion1() {
+    var imagen1 =document.getElementById("foto1");
+        if(fotoMostrada == "mujer"){
+            imagen1.src = "foto.jpg";
+            fotoMostrada = "loro";
+        }
+        else{
+            imagen1.src = "foto2.jpg";
+            fotoMostrada = "mujer";
+        }
+}
+
+//EJERCICIO 6
+function lafuncion(lenguaje) {
+    var elemeto1 = document.getElementById("galeriafotos");
+    if(lenguaje == "foto"){
+        elemeto1.src = "foto.jpg";
+
+    }else if(lenguaje === "foto1"){
+        elemeto1.src = "foto1.png";
+
+    }else if(lenguaje === "foto2")
+        elemeto1.src = "foto2.jpg";
+    
+}
+</script>
+</body>
+</html>
