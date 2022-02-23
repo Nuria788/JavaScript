@@ -103,7 +103,54 @@ echo "Solo los que se apellidan Buetas";
     echo "<br>";
 
 }
+$consulta="SELECT * FROM datosPersonales where edad like '%$busqueda%'";
+$resultado=mysqli_query($conexion, $consulta);
 
+//Mirar fila a fila la informacion que contiene la variable resultado
+//Lo almacena en un arrray.
+// Accede al primer registro, pero si la llamas 
+//otra vez accede al ss registro hasta que no hacha registros
+
+
+//Bucle While
+// Creando un ARRAY
+/*
+while ($fila=mysqli_fetch_row($resultado)){
+
+
+echo $fila[0] . " ";
+echo $fila[1] . " ";
+echo $fila[2] . " ";
+echo $fila[3] . " ";
+echo "<br>";
+}
+echo "<br>";
+echo "<br>";
+/*
+echo "<br>";
+
+$fila=mysqli_fetch_row($resultado);
+
+echo fila[0] . " ";
+echo fila[1] . " ";
+echo fila[2] . " ";
+echo fila[3] . " ";
+*/
+// Esto es lo mismo que el bucle WHILE hecho arriba.
+
+$consulta1="SELECT * FROM datosAlumnos";
+$resultado1=mysqli_query($conexion, $consulta1);
+while($fila1=mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
+
+    echo $fila1['NIF'] . " ";
+    echo $fila1['nombre'] . " ";
+    echo $fila1['apellido'] . " ";
+    echo $fila1['edad'] . " ";
+
+    echo "<br>";
+    echo "<br>";
+
+}
 
 
 // Cerrar la conexion

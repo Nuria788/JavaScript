@@ -1,27 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+
+
+
 <?php
 
+    function ejecuta_consulta($labusqueda){
 
-$busqueda=$_GET["Buscar"]; // El articulo que busque se almacenara aqui. En busqueda
+  
 
 //Datos de la BBDD
    require("datosConexion.php");  // ----> Si guardo los datos de 
    //conexion en otro archivo por si tengo más BBDD
 
 // Union con index
-
-//usuario y contraseña que llegan del formulario
-$usuario    = $_POST["usuario"];
-$contrasena = $_POST["contrasena"];
-
 
 // CONECTAR LA BASE DE DATOS.
 // Almacenada en la variable conexion
@@ -46,15 +43,29 @@ mysqli_select_db($conexion, $nombre_bd) or die ("No se encuentra la BBDD");
 mysqli_set_charset($conexion, "utf8");
 
 
+// Esto es lo mismo que el bucle WHILE hecho arriba.
 
+$consulta1="SELECT * FROM datosAlumnos where edad LIKE '%$labusqueda%'";
+$resultado1=mysqli_query($conexion, $consulta1);
+while($fila1=mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
+echo "<table><tr><td>";
+    echo $fila1['NIF'] . "<td></td>";
+    echo $fila1['nombre'] . "<td></td> ";
+    echo $fila1['apellido'] . "<td></td> ";
+    echo $fila1['edad'] . "<td></td></tr></table> ";
+
+    echo "<br>";
+    echo "<br>";
+
+}
 
 // Hacer una consulta a una tabla para ver que hemos conectado --- Eso es la query
 // Esta consulta se llama query
-$consulta="SELECT * FROM datosPersonales where edad like '%$busqueda%'";
+//$consulta="SELECT * FROM datosPersonales where edad like '%$busqueda%'";
 // NO VA
 
 // Ejercutar la consulta anterior.
-$resultado=mysqli_query($conexion, $consulta);
+//$resultado=mysqli_query($conexion,$consulta);
 
 //Mirar fila a fila la informacion que contiene la variable resultado
 //Lo almacena en un arrray.
@@ -86,24 +97,28 @@ echo fila[1] . " ";
 echo fila[2] . " ";
 echo fila[3] . " ";
 */
-// Esto es lo mismo que el bucle WHILE hecho arriba.
 
-$consulta1="SELECT * FROM datosAlumnos";
-$resultado1=mysqli_query($conexion, $consulta1);
-while($fila1=mysqli_fetch_array($resultado1, MYSQLI_ASSOC)) {
-
-    echo $fila1['NIF'] . " ";
-    echo $fila1['nombre'] . " ";
-    echo $fila1['apellido'] . " ";
-    echo $fila1['edad'] . " ";
-
-    echo "<br>";
-    echo "<br>";
-
-}
 
 // Cerrar la conexion
 mysqli_close($conexion);
+}
 ?>
+
+</head>
+<body>
+    <?php
+    
+    $mibusqueda = $_GET["buscar"];
+    $mipag = $_SERVER["PHP_SELF"];
+    if($mibusqueda!=NULL){
+        ejecuta_consulta($mibusqueda);
+    }else{
+        echo("<form action = '" . $mipag . "'' method = 'get'>
+        <label> Buscar: <input type='text' name ='buscar'></label>
+        <input type='submit' name = 'enviando' value = 'Dale!!'>
+        </form>");
+    }
+    ?>
+    
 </body>
 </html>

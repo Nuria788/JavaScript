@@ -17,7 +17,7 @@
     </form>
 
 
-<body>
+
 <h1>Inicia Sesión</h1>
     <form action="compruebaLogin.php" method="POST">
 <table>

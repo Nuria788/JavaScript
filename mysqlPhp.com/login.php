@@ -8,6 +8,31 @@
 </head>
 <body>
     <?php
+      // Usuario y contraseña que llegan del formulario index
+      $usuario = $_POST ["usuario"];
+      $contrasena = $_POST ["contrasena"];
+  
+      // Datos de la BD.
+      $servidor = "localhost";
+      $usuarioBD = "UsuarioBD";
+      $contrasenaBD = "secret";
+      $nombreBD = "MiEmpresa";
+  
+      // Funcion para sacar popups por pantalla
+  
+      function alert ($mensaje){
+          echo "<script> alert (\"$mensaje\") </script>";
+      }
+  
+      // Crear conexion
+  
+      $conexion = mysqli_connect ($servidor, $usuarioBD, $contrasenaBD, $nombreBD);
+  
+      if (!$conexion){
+          alert ("Conexión fallida: " . mysqli_connect_error());
+      }else{
+          alert ("Conectado");
+      }
 // Consequir Usuarios y pass
 
 $sqlQuery2 ="SELECT usuario, pass FROM Usuarios";

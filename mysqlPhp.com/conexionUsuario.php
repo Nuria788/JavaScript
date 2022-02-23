@@ -37,7 +37,8 @@
 //----------------------------------
     // Envío de datos a la BD.
     $sqlQuery = "INSERT INTO Usuarios (usuario, pass)
-        VALUES ('$usuarioBD', '$contrasenaBD')";
+        VALUES (\"$usuario\", \"$contrasena\")";
+
 
     // Envio de la query
 
