@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VuestroNombre</title>
+    <link rel="stylesheet" href="ejercicio.css">
+</head>
+<body>
+    <h1 class="nombre">VuestroNombre</h1>
+
+    <div class="izquierda">
+            <h1>Div Izquierda</h1>
+    </div>
+
+    <div class="derecha">
+            <h1>Div derecha</h1>
+            <img src="http://iessierradeguara.com/wordpress/wp-content/uploads/logo_sierra_video_gala_navidad-682x340.png" >
+            
+        </div>
+    <script>
+        var divI = document.querySelector(".izquierda")
+        divI.style.height= "500px"
+        var divD = document.querySelector(".derecha")
+        for (var i = 0; i < 500; i++){
+            if (i < 250){
+                var h1 = document.createElement("h1");
+                h1.innerHTML = "Vinyas";
+                divD.appendChild(h1);
+            }
+            else{
+                var h1 = document.createElement("h1");
+                h1.innerHTML = "Torres";
+                divD.appendChild(h1);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VuestroNombre</title>
+    <link rel="stylesheet" href="ejercicio.css">
+</head>
+<body>
+    <h1 class="nombre">VuestroNombre</h1>
+
+    <div class="izquierda" onclick="diaSemana(this)">
+            <h1>Div Izquierda</h1>
+    </div>
+
+    <div class="derecha">
+            <h1 onclick="otroh1()">Div derecha</h1>
+            <img src="http://iessierradeguara.com/wordpress/wp-content/uploads/logo_sierra_video_gala_navidad-682x340.png" >
+            
+        </div>
+    <script>
+        var arr = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"]
+        var txt = document.createElement("p");
+        var divI = document.querySelector(".izquierda")
+        divI.appendChild(txt)
+        var i = 0;
+        function diaSemana(elem){
+            txt.innerHTML = arr[i];
+            i = i + 1;
+            if (i == arr.length){
+                i = 0;
+            }
+        }
+        function otroh1(){
+            var h1 = document.createElement("h1");
+            h1.innerHTML = "Pablo";
+            h1.onclick = function(){otroh1();}
+            document.querySelector(".derecha").appendChild(h1);
+        }
+    </script>
+</body>
+</html>

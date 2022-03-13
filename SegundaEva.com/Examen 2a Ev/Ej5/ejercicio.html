@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VuestroNombre</title>
+    <link rel="stylesheet" href="ejercicio.css">
+</head>
+<body>
+    <h1 class="nombre">VuestroNombre</h1>
+
+    <div class="izquierda" onclick="cambiarColor(this)">
+            <h1>Div Izquierda</h1>
+    </div>
+
+    <div class="derecha">
+            <h1>Div derecha</h1>
+            <img src="http://iessierradeguara.com/wordpress/wp-content/uploads/logo_sierra_video_gala_navidad-682x340.png" >
+            
+    </div>
+    <script>
+        function cambiarColor(elemento){
+            if (elemento.style.backgroundColor == "lightcoral"){
+                elemento.style.backgroundColor = "blue";
+            }
+            else{
+                elemento.style.backgroundColor = "lightcoral";
+            }
+        }
+        var divD = document.querySelector(".derecha");
+        divD.lastElementChild.style.heigth = "100px";
+        divD.lastElementChild.style.width = "100px";
+        divD.lastElementChild.src = "PNG_transparency_demonstration_1.png";
+        
+    </script>
+</body>
+</html>
