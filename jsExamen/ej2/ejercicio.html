@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VuestroNombre</title>
+    <link rel="stylesheet" href="ejercicio.css">
+</head>
+<body>
+    <h1 class="nombre">VuestroNombre</h1>
+
+    <div class="izquierda" onclick="apretarDiv()">
+            <h1>Div Izquierda</h1>
+    </div>
+
+    <div class="derecha">
+            <h1>Div derecha</h1>
+            <img src="http://iessierradeguara.com/wordpress/wp-content/uploads/logo_sierra_video_gala_navidad-682x340.png" >
+            
+    </div>
+    
+
+    <script>
+            let divIzquierda = document.querySelector(".izquierda")
+            
+            let esrojo = false
+            
+            function apretarDiv(){
+
+                if (esrojo){
+                    divIzquierda.style = "background-color:blue"
+                    esrojo = false
+                }else{
+                    divIzquierda.style = "background-color:red"
+                    esrojo= true
+                }
+               
+            }
+
+
+
+
+
+            
+    
+            let imgDerecha = document.querySelector("img")
+            imgDerecha.style.height = "100px"
+            imgDerecha.style.width = "100px"
+            imgDerecha.src = "https://www.nationalgeographic.com.es/medio/2021/02/02/el-ornitorrinco-es-una-de-las-criaturas-mas-raras-del-mundo-aunque-es-un-mamifero-pone-huevos-y-amamanta-a-sus-crias-pero-no-tienen-mamas_baea9677_1200x630.jpg"
+            
+    
+    </script>
+
+</body>
+</html>

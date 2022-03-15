@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VuestroNombre</title>
+    <link rel="stylesheet" href="ejercicio.css">
+</head>
+<body>
+    <h1 class="nombre">VuestroNombre</h1>
+
+    <div class="izquierda" onclick="diaSemana(this)">
+            <h1>Div Izquierda</h1>
+    </div>
+
+    <div class="derecha">
+            <h1 onclick="apretarBtn()">Div derecha</h1>
+            <img src="http://iessierradeguara.com/wordpress/wp-content/uploads/logo_sierra_video_gala_navidad-682x340.png" >
+            
+        </div>
+
+
+    <script>
+
+        let semana = ["lunes","martes","miercoles", "jueves", "viernes", "sabado", "domingo"]
+
+        let contador = 0
+        function diaSemana(divIzquierda){
+
+            divIzquierda.innerHTML = "<h1>"+semana[contador]+"</h1>"
+
+            contador++
+
+            if (contador==7){
+                contador = 0
+            }
+
+        }
+
+        let divDerecha = document.querySelector(".derecha")
+        function apretarBtn(){
+            divDerecha.innerHTML = divDerecha.innerHTML +"<h1 onclick=\"apretarBtn()\" >adrian</h1> "
+        }
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

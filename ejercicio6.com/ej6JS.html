@@ -29,25 +29,20 @@
 
 </head>
 <body>
+    <div class="contenedor">
     <div class="btnImg" onclick="crearImagen()">Boton Imagen</div>
-
     <div class="btnText" onclick= "crearTexto()">Boton Texto</div>
-
-    <div class="contenedor"></div>
+    </div>
 
 
     <script>
         var elCon = document.querySelector(".contenedor")
-
         function crearImagen(){
-            elCon.innerHTML = elCon.innerHTML + "<img src='gato2.jfif'>"
+            elCon.innerHTML = elCon.innerHTML + "<img src='gato2.jpg'>"
         }
-
         function crearTexto(){
             elCon.innerHTML = elCon.innerHTML + " hola "
         }
-
-
     </script>
 
 </body>
