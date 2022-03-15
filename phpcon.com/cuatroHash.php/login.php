@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+<?php
         $dni = $_POST['dni'];
         $email = $_POST['email'];
 
@@ -29,14 +29,13 @@
                 $datos1 = mysqli_fetch_assoc($login);
                 if ($datos1['usuario'] != ""){
                 echo "<table>
-                <tr><td>Usuario</td
-                ><td>Contraseña</td>
+                <tr>
+                <td>Usuario</td>                       
+                <td>Contraseña</td> 
                 <td>Hash</td>
-                <td>DNI</td>
-                <td>email</td>
                 </tr>
                 <tr>
-                <td>".$datos1['usuario']."</td>
+                <td>".$datos1['usuario']."  </td>
                 <td>".$datos1['contrasenya']."</td>
                 <td>".$datos1['hash_contrasenya']."</td>
                 </tr>
@@ -48,5 +47,6 @@
         
 
     ?>
+
 </body>
 </html>

@@ -7,7 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+<!--1. Realizar una página web con un login y un crear usuario
 
+
+2. El crear usuario debe pedir y guardar en la base de datos:
+- usuario
+- contraseña
+- nombre
+- apellidos
+- dni
+
+3. Se deberá hacer login con usuario y hash de la contraseña.
+
+4. Una vez hecho el login deberá aparecer en pantalla:
+- arriba de la pagina el nombre y apellidos
+- una tabla un poco mas abajo con todos los datos de todos los usuarios de la base de datos -->
     <div class ="superior">
         <form action="crearUsuario.php" method="post">
             <h1> Formulario para crear usuario</h1>

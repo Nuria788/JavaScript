@@ -18,7 +18,7 @@
         $contrasenyaBD = "apellido";
         $host = "localhost";
         $db = "examenBD";
-        $tabla = "usuarioExamen";
+        $tabla = "usuariosExamen";
 
         $conn = mysqli_connect($host,$usuarioBD,$contrasenyaBD,$db);
         if(!$conn){
@@ -31,7 +31,7 @@
             $sql_insert = mysqli_query($conn,$ins);
             if($sql_insert){
                 echo "<h1>Se ha creado un usuario correctamente</h1>";
-                $sel = "select * from usuarioExamen where usuario = '".$usuario."';";
+                $sel = "select * from usuariosExamen where usuario = '".$usuario."';";
                 $lectura = mysqli_query($conn,$sel);
                 if($lectura){
                     $fila = mysqli_fetch_assoc($lectura);
@@ -43,7 +43,8 @@
                  
             }
             else{
-                echo "<p>Error: ".mysqli_error($sql_insert)."</p>";
+                echo "Error: " . $ins. "<br>" . mysqli_error($conn);
+                
             }
         }
     ?>
