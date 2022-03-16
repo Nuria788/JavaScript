@@ -57,7 +57,7 @@ $datos = mysqli_query($conexion, $sqlQuery2);
 if (mysqli_num_rows($datos) > 0) {
     // output data of each row
     while($fila = mysqli_fetch_assoc($datos)) {
-    echo "id: " . $fila["id"]. " - Su nombre: " . $fila["usuario"]. " - Su apellido: " . $fila["contrasenya"]. "<br>";
+    echo "id: " . $fila["id"]. " - Su nombre: " . $fila["usuario"]. " - Su contraseña: " . $fila["contrasenya"]. "<br>";
     }
 } else {
     echo "0 results";

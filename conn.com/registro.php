@@ -46,7 +46,7 @@ $insertar = "INSERT INTO Cliente (nombre, apellido, contrasena, usuario)
        ' ;
     }    
 // Verificar que no se repita un correo 
-/*
+
 $verificar_correo = mysqli_query($conexion, "SELECT * FROM Cientes Where' correo ='$correo'");
 if(mysqli_num_rows($verificar_correo)> 0) {
     echo '
@@ -56,7 +56,7 @@ if(mysqli_num_rows($verificar_correo)> 0) {
     </script>
 ';
 exit();
-}*/
+}
 
 
 

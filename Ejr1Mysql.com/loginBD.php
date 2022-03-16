@@ -49,12 +49,12 @@ while ($fila = mysqli_fetch_assoc($datos)){
     }
 }
 ///----------------------
-
+/*
 $sqlQuery2 = "SELECT usuario,password FROM usuarios 
 WHERE usuario = $_POST[usuario] && contrasena = $_POST[contrasena]";
 
 echo "login correcto";
-/*
+
 $usuarioExiste = mysqli_query($conexion, $sqlQuery2);
 
 if ($usuarioExiste){
@@ -62,9 +62,9 @@ echo "login correcto";
 }else{
 echo "usuario o contraseña incorrectos";
 
-}*/
+}
 
-
+*/
 
 
     mysqli_close($conexion);
