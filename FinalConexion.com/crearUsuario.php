@@ -27,13 +27,13 @@ if (!$conn){
 }
 else {
     echo "<h1> Conexion correcta</h1>";
-    $ins ="insert into " . $tabla."
+    $ins ="INSERT INTO " . $tabla."
         values ('".$usuario."'.'".$contrasenya."', '".$hash_contrasenya."', '".$dni."', '".$email."');";
     $sql_insert =mysqli_query($conn,$ins);
 
         if ($sql_insert){
             echo  "<h1>Se ha creado un usario correctamente</h1>";
-            $sel = "select * from usuariosExamen where usuario = '".$usuario."';";
+            $sel = "SELECT * FROM usuariosExamen WHERE usuario = '".$usuario."';";
             $lectura  = mysqli_query($conn,$sel);
                 if ($lectura){
                     $fila =mysqli_fetch_assoc($lectura);

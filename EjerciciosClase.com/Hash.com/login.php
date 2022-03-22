@@ -25,10 +25,10 @@
             $contrasena = $_POST["contrasena"];
 
             //datos de la base de datos
-            $usuarioBD    = "userFinalPHP";
-            $contrasenaBD = "passFinal";
-            $nombreBD     = "finalPHPdb";
-            $nombreTablaBD= "usuarios";
+            $usuarioBD    = "UsuarioBD";
+            $contrasenaBD = "secret";
+            $nombreBD     = "MiEmpresa";
+            $nombreTablaBD= "Usuariosdb";
 
             // Crear conexion con la base datos
             $conexion = mysqli_connect("localhost", $usuarioBD, $contrasenaBD, $nombreBD);
@@ -39,8 +39,8 @@
 
 
             //query que enviamos a la base de datos
-            $sqlQuery = "SELECT * FROM usuarios 
-            WHERE usuario=\"$usuario\" AND contrasena = \"$hash\" ";
+            $sqlQuery = "SELECT * FROM Usuariosdb
+            WHERE usuario=\"$usuario\" AND pass = \"$hash\" ";
 
             //enviamos la query que inserta el usuario y el password
             //mysqli_query($conexion, $sqlQuery);
@@ -67,12 +67,12 @@
                             <td>Apellidos</td>
                             <td>DNI</td>
                         </tr>";
-
-                //query que enviamos a la base de datos
-                $sqlQueryTodosLosDatos = "SELECT * FROM usuarios ";
+                        
+                //query que enviamos a la base de datos  TODOS
+                $sqlQueryTodosLosDatos = "SELECT * FROM Usuariosdb ";
                 $todosDatos = mysqli_query($conexion, $sqlQueryTodosLosDatos);
 
-                
+              
                 //iteramos sobre todas las filas de la tabla usuarios
                 while( $filaUsuario = mysqli_fetch_assoc($todosDatos)) {
                     
@@ -98,8 +98,25 @@
 
               } else {
                 echo "Error: " . $sqlQuery . "<br>" . mysqli_error($conexion);
-              }
+                      }
 
+
+
+ //query para comprobar si existe un usuario y contraseña
+//contraseña o usuario correctos o incorrectos
+
+
+ $sqlQuery2 = 'SELECT usuario,pass FROM Usuariosdb 
+ WHERE usuario = $_POST["usuario"] && pass = $_POST["contrasena"]';
+
+echo "login correcto";
+
+$usuarioExiste = mysqli_query($conexion, $sqlQuery2);
+
+if ($usuarioExiste){
+echo "login correcto";
+}else{
+echo "usuario o contraseña incorrectos"; }
         ?>
     
 </body>
