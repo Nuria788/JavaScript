@@ -64,7 +64,7 @@ Where $genero = 'mujer';";
 $datos = mysqli_query($conexion, $seleccionar);
 
 //miramos si los datos tienen mas de 0 fila
-if (mysqli_num_rows($datos) > 0) {
+/* if (mysqli_num_rows($datos) > 0) {
     // output data of each row
     while($fila = mysqli_fetch_assoc($datos)) {
     echo "id: " . $fila["id"]. " - La inquilina : " . $fila["usuario"]. " - pesa: " . $fila["peso"]. "<br>";
@@ -72,6 +72,17 @@ if (mysqli_num_rows($datos) > 0) {
 } else {
     echo "id: " . $fila["id"]. " - El sujeto tiene una : " . $fila["usuario"]. " - altura: " . $fila["altura"]. "<br>";
     ;
+}*/
+//////
+if($datos){
+    if($genero == "masculino"){
+
+        echo "<h1>el sujeto tiene una altura: \"$altura\"</h1>";
+    }
+    else{
+        echo "<h1>la inquilina pesa: \"$peso\"</h1>";
+    }
+   
 }
 
 mysqli_close($conn);

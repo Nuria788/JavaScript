@@ -9,7 +9,7 @@
 <body>
 <p>Ingreso de login</p>
 
-<form action="login1.php" method="post">
+<form action="login2.php" method="post">
     
     <p>Introducir altura <input type="text" name="altura" maxlength="32"></p>
     <p>Introducir peso <input type="text" name="peso" maxlength="32"></p>
