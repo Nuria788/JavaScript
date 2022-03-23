@@ -29,34 +29,29 @@ if (!$conexion) {
     alert("Conectado correctamente");
 }   //  SIEMPRE ES ASI
       
-        $seleccionar = "SELECT INTO  \"$tabla\"  
-        WHERE altura= \"$altura\" AND peso=\"$peso\" AND edad=\"$edad\"  ";    
+        ;
+        $seleccionar = "SELECT * FROM $tabla WHERE altura = $_POST [$altura]  AND peso= $_POST [$peso]  
+            AND edad = $_POST [$edad] ";
 
-        $datos = mysqli_query($conexion, $seleccionar);
-        
-        if($datos){
-
-            $fila = mysqli_fetch_assoc($datos);
-
-            $usuario = $fila["usuario"];
-            $genero = $fila["genero"];
-            $union = "<h3>Nombre: $usuario genero: $genero</h3>"{
-                for ($i=1; $i<3; $i= $i + 1)
-                {
-                    echo "<h3> $i. Nombre: $usuario genero: $genero</h3>"
-                    }
-                };
-           
+        $consulta = mysqli_query($conexion, $seleccionar);
 
 
-        };
 
-        
-        
+if($datos){
+
+    $fila = mysqli_fetch_assoc($datos);
+
+    $usuario = $fila["usuario"];
+    $genero = $fila["genero"];
+    
+for ($i=1; $i<=3; $i=++)
+    echo "<h3> $i , Nombre: $usuario genero: $genero</h3>";
+    ///
+}
 
 
-       
-        
+
+
     ?>
 
 
