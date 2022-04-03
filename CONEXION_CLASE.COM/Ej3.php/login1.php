@@ -44,7 +44,7 @@ if($datos){
     $usuario = $fila["usuario"];
     $genero = $fila["genero"];
     
-for ($i=1; $i<=3; $i=++)
+for ($i=1; $i<4; $i++)
     echo "<h3> $i , Nombre: $usuario genero: $genero</h3>";
     ///
 }
